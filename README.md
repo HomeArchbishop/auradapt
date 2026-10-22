@@ -1,8 +1,13 @@
 # auradapt
 
-OneBot v11 ↔ 消息平台适配器（Bun + TypeScript monorepo）。
+把各平台的消息桥接到 OneBot 协议。
 
-把 Telegram 等平台的消息桥接到 OneBot 协议，供 NoneBot / Koishi / aurorax 等框架使用。
+## Roadmap
+
+- [x] Telegram
+- [ ] QQ
+- [ ] Discord
+- [ ] Line
 
 ## 结构
 
@@ -14,10 +19,6 @@ packages/telegram         # Telegram Bot API、polling、编解码、actions
 ```
 
 平台能力各自独立成 package；新增平台时实现 `@auradapt/core` 的 `Platform` 接口，并在 `apps/gateway` 注册即可。
-
-## 要求
-
-- [Bun](https://bun.sh) ≥ 1.3
 
 ## 快速开始
 
